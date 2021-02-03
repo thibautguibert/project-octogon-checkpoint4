@@ -81,15 +81,27 @@ router.post("/", (req, res) => {
 // DELETE ONE TYPE
 router.delete("/:id", (req, res) => {
     const { id } = req.params;
-    let sql = `DELETE FROM types WHERE id=${id}`
-    connection.query(sql, (err, result) => {
-        if (err) {
-            res.status(500).json({ error: err.message })
+    // we have to delete the weaknesses before the type itself
+    let sql = `DELETE FROM weaknesses AS w
+    JOIN types AS atk ON atk.id=w.id_attacker
+    JOIN types AS def ON def.id=w.id_defender
+    WHERE w.id_attacker=${id} OR w.id_defender=${id}`
+    connection.query(sql, (errOne) => {
+        if (errOne) {
+            res.status(500).json({ error: errOne.message })
         }
-        else if (result.length === 0) {
-            res.status(404).json({ error: `le type numéro ${id} n'a pas été trouvé` })
-        } else {
-            res.status(200).json({ success: "the type was successfully deleted" });
+        else {
+            sql = `DELETE FROM types WHERE id=${id}`
+            connection.query(sql, (errTwo, resultTwo) => {
+                if (errTwo) {
+                    res.status(500).json({ error: errTwo.message })
+                }
+                else if (resultTwo.length === 0) {
+                    res.status(404).json({ error: `le type numéro ${id} n'a pas été trouvé` })
+                } else {
+                    res.status(200).json({ success: "the type was successfully deleted" });
+                }
+            })
         }
     })
 })
