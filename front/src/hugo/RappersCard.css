@@ -1,11 +1,12 @@
 .RappersCard {
   width: 280px;
   height: 450px;
-  border-radius: 30px;
-  background-color: gray;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   padding: 0px 15px;
+  margin: 15px;
+  box-shadow: 2px 3px 15px -2px #fcfcfc;
 }
 .topPart {
   display: flex;
@@ -20,11 +21,16 @@
   bottom: 20px;
   position: relative;
   z-index: 10;
-  -webkit-text-stroke: black 1px;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -1px 2px 0 #000;
+  font-size: 12px;
 }
 .nameRap {
   color: white;
-  -webkit-text-stroke: black 2px;
+  font-size: 24px;
+  /* -webkit-text-stroke: black 2px; */
+  text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
+    4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
 }
 .bottomPart {
   display: flex;
@@ -59,11 +65,11 @@
   left: -5px;
 }
 .imgRap {
-  height: 400px;
-  width: 100%;
+  height: 315px;
   background-color: wheat;
   z-index: 0;
   position: relative;
+  object-fit: cover;
 }
 .logoGroup {
   width: 70px;
@@ -82,28 +88,17 @@
   display: flex;
   flex-direction: column;
 }
-.fondLogo2 {
-  background-color: gray;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  z-index: 10;
-  top: 20px;
-  left: -10px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 .nomRap {
   text-align: center;
   width: 100%;
   padding-top: 5px;
+  z-index: 10;
 }
 .rarity {
   font-size: 40px;
   color: white;
-  -webkit-text-stroke: black 1px;
+  text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
+    4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
 }
 .stat {
   display: flex;
@@ -118,6 +113,62 @@
   z-index: 10;
   bottom: 55px;
   left: 10px;
-  font-size: 25px;
-  -webkit-text-stroke: black 1px;
+  font-size: 27px;
+  text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
+    4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
+}
+.rappeurs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.rappersList {
+  background-color: var(--dark);
+  min-height: 100vh;
+}
+.rappeursTitre {
+  color: var(--light);
+  text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
+    4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
+  padding: 15px;
+}
+.rapperHeader {
+  flex-direction: row;
+  width: 100%;
+  padding: 3%;
+  justify-content: space-around;
+}
+.ORFlogo {
+  width: 15%;
+}
+.vide {
+  width: 20%;
+}
+.searchBar {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 2%;
+}
+.searchText {
+  width: 25%;
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 10px;
+  border: none;
+  background-color: var(--light);
+}
+.rechercheBnt {
+  width: 10%;
+  height: 40px;
+  border-radius: 30px;
+  margin: 15px;
+  font-size: 17px;
+  border: none;
+  background-color: var(--light);
 }
