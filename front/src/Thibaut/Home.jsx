@@ -16,7 +16,7 @@ export const Home = () => {
                 <div className="fading"></div>
             </header>
             <section className="homeBody">
-                <Link to="/play">
+                <Link to="/admin">
                     <button type="button" className="buttonPlay">Entrez dans l'arène</button>
                 </Link>
                 <div className="cardDisplay">

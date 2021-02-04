@@ -68,6 +68,7 @@
 }
 
 .typeCard .logoBackground{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -77,9 +78,41 @@
     width: 200px;
 }
 
+.typeCard .logoBackground img{
+    position:absolute;
+    top:25%;
+    height: 50%;
+}
+
 .typeCard .logoBackground p{
     color: var(--light);
     font-size: 26px;
     text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
     4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
+}
+
+.labelFile{
+    display: block;
+    color: var(--light);
+    opacity: 0.75;
+    border:none;
+    border-bottom: solid 1px var(--light);
+    background-color: inherit;
+    color: var(--light);
+    font-size: 18px;
+    padding: 3px 0 3px 20px;
+    margin: 20px 0;
+    width: 350px;
+    transition: all 750ms;
+    cursor: pointer;
+}
+
+.labelFile:hover{
+    color:var(--dark);
+    background-color: var(--light);
+    border-radius: 20px;
+}
+
+.inputFile{
+    display: none;
 }
