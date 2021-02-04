@@ -1,5 +1,6 @@
 .RappersCard {
   width: 280px;
+  background-color: gray;
   height: 450px;
   border-radius: 15px;
   display: flex;
@@ -171,4 +172,12 @@
   font-size: 17px;
   border: none;
   background-color: var(--light);
+}
+.modifRappers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.RappersCardM {
+  padding-right: 10%;
 }
