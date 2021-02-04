@@ -1,0 +1,123 @@
+.RappersCard {
+  width: 280px;
+  height: 450px;
+  border-radius: 30px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+}
+.topPart {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  text-align: center;
+}
+.nomGroup {
+  color: white;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  position: relative;
+  z-index: 10;
+  -webkit-text-stroke: black 1px;
+}
+.nameRap {
+  color: white;
+  -webkit-text-stroke: black 2px;
+}
+.bottomPart {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.statsPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+  height: 35px;
+}
+.DefAtk {
+  display: flex;
+  flex-direction: row;
+}
+.atk,
+.def,
+.micro {
+  width: 55px;
+  height: 55px;
+  z-index: 10;
+  position: relative;
+  bottom: 27px;
+}
+.micro {
+  right: -5px;
+}
+.atk,
+.def {
+  left: -5px;
+}
+.imgRap {
+  height: 400px;
+  width: 100%;
+  background-color: wheat;
+  z-index: 0;
+  position: relative;
+}
+.logoGroup {
+  width: 70px;
+  height: 70px;
+  z-index: 10;
+  position: relative;
+}
+.fondLogo {
+  background-color: black;
+  width: 120px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+  border: gray solid 10px;
+  display: flex;
+  flex-direction: column;
+}
+.fondLogo2 {
+  background-color: gray;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  z-index: 10;
+  top: 20px;
+  left: -10px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.nomRap {
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+}
+.rarity {
+  font-size: 40px;
+  color: white;
+  -webkit-text-stroke: black 1px;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.Chiffre {
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  bottom: 55px;
+  left: 10px;
+  font-size: 25px;
+  -webkit-text-stroke: black 1px;
+}
