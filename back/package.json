@@ -7,7 +7,7 @@
     "create-db-migration": "db-migrate create $NAME --sql-file",
     "migrate-db": "db-migrate up",
     "rollback-last-db-migration": "db-migrate down",
-    "start:server:watch": "nodemon -e yaml,js,json app.js"
+    "start:server:watch": "nodemon -e yaml,js,json app.js --delay 1500ms"
   },
   "author": "",
   "license": "ISC",
