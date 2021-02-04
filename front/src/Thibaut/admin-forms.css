@@ -1,0 +1,43 @@
+.create-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-form h1 {
+    background-color:var(--light);
+    border-radius: 0 30px 30px 0;
+    padding: 10px 40px 10px 50px;
+    width:350px;
+}
+
+.create-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+}
+
+.create-form label input, .create-form label select {
+    border:none;
+    border-bottom: solid 1px var(--light);
+    background-color: inherit;
+    color: var(--light);
+    font-size: 18px;
+    padding: 3px 0 3px 20px;
+    margin: 20px 0;
+    width: 350px;
+}
+
+.create-form .buttonCreate{
+    width: 150px;
+    padding: 5px;
+    border:none;
+    border-radius: 5px;
+    transition: all 500ms;
+}
+
+.create-form .buttonCreate:hover{
+    color: var(--light);
+    background-color: transparent;
+    font-size: larger;
+    cursor: pointer;
+}

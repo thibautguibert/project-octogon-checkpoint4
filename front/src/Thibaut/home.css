@@ -35,7 +35,7 @@
 
 .homeBody .buttonPlay{
     position: relative;
-    z-index: 5;
+    z-index: 4;
     color: var(--dark);
     font-size: 24px;
     background-color: var(--light);
@@ -50,7 +50,7 @@
 
 .homeBody .buttonPlay:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(230, 230,230,0.75);
+    box-shadow: 0 5px 15px rgba(230, 230,230,0.75);
 }
 
 .homeBody .cardDisplay{
