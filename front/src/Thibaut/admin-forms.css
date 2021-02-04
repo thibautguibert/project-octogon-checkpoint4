@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px 50px;
+    max-width: 50%;
 }
 
 .create-form label input, .create-form label select {
@@ -25,6 +26,11 @@
     padding: 3px 0 3px 20px;
     margin: 20px 0;
     width: 350px;
+}
+
+.create-form input::-webkit-input-placeholder, .create-form input::-moz-placeholder {
+    color: var(--light);
+    opacity: 0.8;
 }
 
 .create-form .buttonCreate{
@@ -40,4 +46,40 @@
     background-color: transparent;
     font-size: larger;
     cursor: pointer;
+}
+
+.previewTypeCreation{
+    min-width: 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.previewTypeCreation .typeCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    height: 300px;
+    width: 60%;
+    margin: 20px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.typeCard .logoBackground{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+    background-color: var(--dark);
+    height: 200px;
+    width: 200px;
+}
+
+.typeCard .logoBackground p{
+    color: var(--light);
+    font-size: 26px;
+    text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
+    4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
 }
