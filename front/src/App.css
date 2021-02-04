@@ -16,10 +16,17 @@ body {
 
 
 .page {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   background-color: var(--dark);
-  height: 100vh;
+  min-height: calc(100vh - 138.5px);
+  max-height: 100vh;
+}
+
+.hidden{
+  opacity: 0;
 }
 
 :root{
