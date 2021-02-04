@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
 import { Switch, Route } from "react-router-dom";
+
 import { Home } from './Thibaut/Home';
 import { Rules } from './Thibaut/Rules';
 import { Rappers } from './Thibaut/Rappers';
 import { TypesTable } from './Thibaut/TypesTable';
 import { TheGame } from './Thibaut/TheGame';
 import { Admin } from './Admin';
+
 
 function App() {
   return (
