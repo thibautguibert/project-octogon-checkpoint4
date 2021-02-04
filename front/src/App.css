@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
 }
 
 body {
@@ -14,6 +15,16 @@ body {
 }
 
 
-.App {
-  text-align: center;
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  height: 100vh;
+}
+
+:root{
+  --dark: #161720;
+  --light: #E6ECF2;
+  --red: #CF2323;
+
 }
