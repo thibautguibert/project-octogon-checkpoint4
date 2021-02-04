@@ -3,7 +3,7 @@ const { connection } = require("../../database");
 
 router.get("/", (req, res) => {
     const { name } = req.query;
-    if (name.length > 0) {
+    if (name) {
         const sql = `SELECT r.name, r.id, r.rarity, r.lifepoints, r.power, r.cost, r.image, m.id AS id_type, m.name AS name_type, m.logo AS logo_type, m.color AS color_type
                      FROM rappers AS r
                      JOIN types AS m ON m.id=r.id_type 
@@ -16,7 +16,9 @@ router.get("/", (req, res) => {
             }
           });
     } else {
-        const sql = "SELECT * FROM rappers";
+      const sql = `SELECT r.name, r.id, r.rarity, r.lifepoints, r.power, r.cost, r.image, m.id AS id_type, m.name AS name_type, m.logo AS logo_type, m.color AS color_type
+      FROM rappers AS r
+      JOIN types AS m ON m.id=r.id_type `
         connection.query(sql, (err, result) => {
       if (err) {
         res.status(500).json({ errorMessage: err.message });
@@ -76,7 +78,7 @@ router.put("/:id", (req, res) => {
       const sql = `SELECT * FROM rappers WHERE id=${id}`;
       connection.query(sql, (errO, result) => {
           if (errO) {
-              res.status(500).json({ errorO: err.message })
+              res.status(500).json({ errorO: errO.message })
           } else {
               res.status(200).json(result[0]);
           }
