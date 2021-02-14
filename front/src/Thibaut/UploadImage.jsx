@@ -16,6 +16,7 @@ export const UploadImage = ({ setFileName, setError }) => {
                 .then((res) => {
                     setFileName(res.data.filename);
                     setLabel("L'image a bien été uploadée")
+                    setError("")
 
                 })
                 .catch(err => alert(err))
@@ -23,7 +24,7 @@ export const UploadImage = ({ setFileName, setError }) => {
     }
     return (
         <div>
-            <label htmlFor="upload" className="labelFile">Choisir une image</label>
+            <label htmlFor="upload" className="labelFile">{label}</label>
             <input id="upload" type="file" accept="image/*" onChange={handleChangeFile} className="inputFile" />
         </div>
     )

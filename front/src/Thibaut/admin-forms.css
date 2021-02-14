@@ -55,19 +55,20 @@
     justify-content: center;
 }
 
-.previewTypeCreation .typeCard{
+.typeCard{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--light);
+}
+
+.previewTypeCreation .typeCard{
     height: 300px;
-    width: 60%;
     margin: 20px;
     padding: 50px;
     border-radius: 10px;
 }
-
-.typeCard .logoBackground{
+.previewTypeCreation .typeCard .logoBackground{
     position: relative;
     display: flex;
     justify-content: center;
@@ -84,7 +85,7 @@
     height: 50%;
 }
 
-.typeCard .logoBackground p{
+.previewTypeCreation .typeCard .logoBackground p{
     color: var(--light);
     font-size: 26px;
     text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
@@ -115,4 +116,36 @@
 
 .inputFile{
     display: none;
+}
+
+.typesList{
+    display: flex;
+    padding: 10px;
+    margin: 50px 30px;
+    overflow-x: scroll;
+}
+
+.typesList .typeCard{
+    height: 140px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.typesList .typeCard .logoBackground{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+    background-color: var(--dark);
+    height: 100px;
+    width: 100px;
+}
+
+.typesList .typeCard .logoBackground p{
+    color: var(--light);
+    font-size: 15px;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    0px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
 }
