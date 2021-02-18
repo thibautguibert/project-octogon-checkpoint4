@@ -5,7 +5,7 @@ router.post("/type", (req, res) => {
     // configuration du dossier de stockage d'image et le nom de l'image
     const storage = multer.diskStorage({
         destination: (request, file, cb) => {
-            cb(null, "public/Images/rappers/icons")
+            cb(null, "public/Images/icons")
         },
         filename: (_, file, cb) => {
             cb(null, `${Date.now()}-${file.originalname}`)

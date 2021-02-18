@@ -5,6 +5,8 @@ import { AdminHeader } from "./Thibaut/AdminHeader";
 import { CreateType } from "./Thibaut/CreateType";
 import { CreateRapper } from "./Thibaut/CreateRapper";
 import ModifRapper from "./hugo/ModifRapper";
+import { ModifyType } from "./Thibaut/ModifyType";
+import { DeleteType } from "./Thibaut/DeleteType";
 
 export const Admin = () => {
   const { path } = useRouteMatch();
@@ -14,6 +16,8 @@ export const Admin = () => {
       <Switch>
         <Route exact path={`${path}/`} component={AdminHome} />
         <Route path={`${path}/create-type`} component={CreateType} />
+        <Route path={`${path}/modify-type`} component={ModifyType} />
+        <Route path={`${path}/delete-type`} component={DeleteType} />
         <Route path={`${path}/create-rapper`} component={CreateRapper} />
         <Route path={`${path}/modify-rapper`} component={ModifRapper} />
       </Switch>

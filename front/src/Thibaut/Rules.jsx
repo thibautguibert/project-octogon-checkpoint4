@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const Rules = () => {
-    return (
-        <div>
-            rules
-        </div>
-    )
-}
+  return <div>rules</div>;
+};

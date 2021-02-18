@@ -1,118 +1,195 @@
 .create-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .create-form h1 {
-    background-color:var(--light);
-    border-radius: 0 30px 30px 0;
-    padding: 10px 40px 10px 50px;
-    width:350px;
+  background-color: var(--light);
+  border-radius: 0 30px 30px 0;
+  padding: 10px 40px 10px 50px;
+  width: 350px;
 }
 
 .create-form form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 50px;
-    max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  max-width: 50%;
 }
 
-.create-form label input, .create-form label select {
-    border:none;
-    border-bottom: solid 1px var(--light);
-    background-color: inherit;
-    color: var(--light);
-    font-size: 18px;
-    padding: 3px 0 3px 20px;
-    margin: 20px 0;
-    width: 350px;
+.create-form label input,
+.create-form label select {
+  border: none;
+  border-bottom: solid 1px var(--light);
+  background-color: inherit;
+  color: var(--light);
+  font-size: 18px;
+  padding: 3px 0 3px 20px;
+  margin: 20px 0;
+  width: 350px;
 }
 
-.create-form input::-webkit-input-placeholder, .create-form input::-moz-placeholder {
-    color: var(--light);
-    opacity: 0.8;
+.create-form input::-webkit-input-placeholder,
+.create-form input::-moz-placeholder {
+  color: var(--light);
+  opacity: 0.8;
 }
 
-.create-form .buttonCreate{
-    width: 150px;
-    padding: 5px;
-    border:none;
-    border-radius: 5px;
-    transition: all 500ms;
+.create-form .buttonCreate {
+  width: 150px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  transition: all 500ms;
 }
 
-.create-form .buttonCreate:hover{
-    color: var(--light);
-    background-color: transparent;
-    font-size: larger;
-    cursor: pointer;
+.create-form .buttonCreate:hover {
+  color: var(--light);
+  background-color: transparent;
+  font-size: larger;
+  cursor: pointer;
 }
 
-.previewTypeCreation{
-    min-width: 50%;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
+.previewTypeCreation {
+  min-width: 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-.previewTypeCreation .typeCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--light);
-    height: 300px;
-    width: 60%;
-    margin: 20px;
-    padding: 50px;
-    border-radius: 10px;
+.typeCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light);
 }
 
-.typeCard .logoBackground{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 50%;
-    background-color: var(--dark);
-    height: 200px;
-    width: 200px;
+.previewTypeCreation .typeCard {
+  height: 300px;
+  margin: 20px;
+  padding: 50px;
+  border-radius: 10px;
+}
+.previewTypeCreation .typeCard .logoBackground {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 50%;
+  background-color: var(--dark);
+  height: 200px;
+  width: 200px;
 }
 
-.typeCard .logoBackground img{
-    position:absolute;
-    top:25%;
-    height: 50%;
+.typeCard .logoBackground img {
+  position: absolute;
+  top: 25%;
+  height: 50%;
 }
 
-.typeCard .logoBackground p{
-    color: var(--light);
-    font-size: 26px;
-    text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
+.previewTypeCreation .typeCard .logoBackground p {
+  color: var(--light);
+  font-size: 26px;
+  text-shadow: 4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000,
     4px 4px #000, -4px -4px 0 #000, 4px -4px 0 #000, -1px 4px 0 #000;
 }
 
-.labelFile{
-    display: block;
-    color: var(--light);
-    opacity: 0.75;
-    border:none;
-    border-bottom: solid 1px var(--light);
-    background-color: inherit;
-    color: var(--light);
-    font-size: 18px;
-    padding: 3px 0 3px 20px;
-    margin: 20px 0;
-    width: 350px;
-    transition: all 750ms;
-    cursor: pointer;
+.labelFile {
+  display: block;
+  color: var(--light);
+  opacity: 0.75;
+  border: none;
+  border-bottom: solid 1px var(--light);
+  background-color: inherit;
+  color: var(--light);
+  font-size: 18px;
+  padding: 3px 0 3px 20px;
+  margin: 20px 0;
+  width: 350px;
+  transition: all 750ms;
+  cursor: pointer;
 }
 
-.labelFile:hover{
-    color:var(--dark);
-    background-color: var(--light);
-    border-radius: 20px;
+.labelFile:hover {
+  color: var(--dark);
+  background-color: var(--light);
+  border-radius: 20px;
 }
 
-.inputFile{
-    display: none;
+.inputFile {
+  display: none;
+}
+
+.typesList {
+  display: flex;
+  padding: 10px;
+  margin: 50px 30px;
+  overflow-x: scroll;
+}
+
+.typesList .typeCard {
+  height: 140px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.typesList .typeCard .logoBackground {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 50%;
+  background-color: var(--dark);
+  height: 100px;
+  width: 100px;
+}
+
+.typesList .typeCard .logoBackground p {
+  color: var(--light);
+  font-size: 15px;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    0px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+.deleteTitle {
+  color: var(--light);
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.deleteValidation {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.deleteValidation h2 {
+  color: var(--light);
+  font-size: 24px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.deleteValidation .buttonCreate {
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  margin: 40px 0;
+  border: none;
+  border-radius: 5px;
+  transition: all 500ms;
+}
+
+.deleteValidation .buttonCreate:hover {
+  color: var(--light);
+  background-color: transparent;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.deleteValidation p {
+  color: var(--light);
 }

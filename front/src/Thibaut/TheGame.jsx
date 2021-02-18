@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const TheGame = () => {
-    return (
-        <div>
-            THE Game !
-        </div>
-    )
-}
+  return <div>THE Game !</div>;
+};
