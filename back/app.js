@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/rappers", express.static("public/Images/rappers"))
-app.use("/icons", express.static("public/Images/rappers/icons"))
+app.use("/icons", express.static("public/Images/icons"))
 
 // routes
 app.use("/api", router);

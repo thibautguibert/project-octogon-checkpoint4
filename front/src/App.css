@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   outline: none;
 }
 
@@ -24,7 +24,7 @@ body {
   min-height: calc(100vh - 138.5px);
 }
 
-.hidden{
+.hidden {
   opacity: 0;
 }
 

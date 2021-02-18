@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const TypesTable = () => {
-    return (
-        <div>
-            table des types
-        </div>
-    )
-}
+  return <div>table des types</div>;
+};
